@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wired</title>
+    <!-- //770 mobile,1020tab -->
+    <script
+      src="https://kit.fontawesome.com/032f5a99f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #screen {
+        width: 100%;
+        /* height: 1500px; */
+        border: 1px solid green;
+      }
+      #navbar {
+        width: 100%;
+        height: 50px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      #navbar > div:nth-child(1) {
+        width: 70%;
+        height: 50px;
+        border: 1px solid black;
+      }
+      #navbar > div:nth-child(2) {
+        width: 30%;
+        height: 50px;
+        border: 1px solid black;
+      }
+      #first {
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
+
+      #first > div:nth-child(1) {
+        width: 10%;
+        height: 100%;
+        /* border: 1px solid blue; */
+        padding-left: 15px;
+        padding-top: 15px;
+      }
+      #first > div:nth-child(2) {
+        width: 25%;
+        height: 100%;
+        /* border: 1px solid blue; */
+        padding-top: 3px;
+      }
+      #first > div:nth-child(3) {
+        width: 70%;
+        height: 100%;
+        /* border: 1px solid blue; */
+        display: flex;
+        font-size: 12px;
+        justify-content: space-between;
+        padding-top: 15px;
+        font-family: Wiredmono, helvetica, sans-serif;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+      }
+      #second {
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
+      #second > div:nth-child(1) {
+        width: 80%;
+        height: 100%;
+        /* border: 2px solid green; */
+        display: flex;
+        justify-content: space-between;
+        margin-left: 60px;
+        padding-top: 12px;
+        font-family: Wiredmono, helvetica, sans-serif;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        font-size: 12px;
+      }
+      #second > div:nth-child(1) > div:nth-child(1) {
+        width: 60%;
+        /* border: 1px solid black; */
+        text-align: center;
+      }
+      #second > div:nth-child(1) > div:nth-child(2) {
+        width: 40%;
+        height: 20px;
+        border: 1px solid black;
+        text-align: center;
+        color: white;
+        background-color: blue;
+      }
+      #second > div:nth-child(2) {
+        width: 20%;
+        height: 100%;
+        /* border: 1px solid green; */
+        padding-left: 15px;
+        padding-top: 15px;
+      }
+      #body
+      {
+        width: 90%;
+        /* height: 500px; */
+        border-top: 1px solid grey;
+        margin: auto;
+        display: flex;
+        /* border: 1px solid black; */
+        margin-bottom: 50px;
+        
+    
+      }
+      #body>div:nth-child(1)
+      {
+        width: 70%;
+        height: 100%;
+        /* border: 1px solid blue; */
+        border-top: 10px;
+        border-right: 1px solid grey;
+      }
+      
+    #body>div:nth-child(1)>div
+      {
+        display: flex;
+      }
+      #body>div:nth-child(1)>h1
+      {
+
+        height: 12px;
+        font-size: 10px;
+        border: 1px solid black;
+        width: 80px;
+        background-color: black;
+        color: white;
+      }
+     #flex>div:nth-child(1)
+     {
+        width:50%;
+        /* height: 500px; */
+        /* border: 1px solid black; */
+        
+     }
+     #flex>div:nth-child(1)>div:nth-child(1)
+     {
+        width: 100%;
+        /* height: 230px; */
+        /* border: 1px solid green; */
+        margin-bottom: 10px;
+     }
+     #flex>div:nth-child(1)>div:nth-child(1)>img
+     {
+        width: 250px;
+        padding-left: 10px;
+        padding-top: 10px;
+        margin-bottom: 5px;
+     }
+     #flex>div:nth-child(1)>div:nth-child(1)>h3
+     {
+        font-size: 12px;
+        margin-bottom: 4px;
+     }
+     #flex>div:nth-child(1)>div:nth-child(1)>p
+     {
+        font-weight: bold;
+        margin-bottom: 5px;
+     }
+     #flex>div:nth-child(1)>div:nth-child(2)
+     {
+        width: 100%;
+        /* height: 230px; */
+        /* border: 1px solid green; */
+     }
+     #flex>div:nth-child(1)>div:nth-child(2)>img
+     {
+        width: 250px;
+        padding-left: 10px;
+        padding-top: 10px;
+        margin-bottom: 5px;
+     }
+     #flex>div:nth-child(1)>div:nth-child(2)>h3
+     {
+        font-size: 12px;
+        margin-bottom: 4px;
+     }
+     #flex>div:nth-child(1)>div:nth-child(2)>p
+     {
+        font-weight: bold;
+        margin-bottom: 5px;
+     }
+     #flex>div:nth-child(2)
+     {
+        width: 100%;
+        /* height: 490px; */
+        /* border: 1px solid green; */
+     }
+     #flex>div:nth-child(2)>h3
+     {
+        font-size: 12px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+     }
+     #flex>div:nth-child(2)>h2{
+        margin-bottom: 10px;
+        font-size: 30px;
+     }
+      #flex>div:nth-child(2)>img
+      {
+        width: 100%;
+      }
+      #body>div:nth-child(2)
+      {
+        width: 30%;
+        height: 100%;
+        border-top: 1px solid grey;
+        margin-left: 10px;
+      }
+      #body>div:nth-child(2)>h1
+      {
+        font-size: 10px;
+        border: 1px solid black;
+        width: 80px;
+        background-color: black;
+        color: white;
+      }
+      #most
+      {
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid blue; */
+      }
+      #most>div{
+        width: 100%;
+        height: 100px;
+        /* border: 1px solid  black; */
+      }
+      
+      #most>div:nth-child(1)
+      {
+        display: flex;
+        justify-content: space-between;
+      }
+      #most>div:nth-child(1)>div:nth-child(1)
+      {
+        width: 70%;
+        /* border: 2px solid red; */
+      } 
+      #most>div:nth-child(1)>div:nth-child(1) >h3 
+      {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+      #most>div:nth-child(1)>div:nth-child(1) >p
+      {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+      #most>div:nth-child(1)>div:nth-child(2)
+      {
+        width: 25%;
+        /* border: 1px solid green; */
+
+      }
+      #most>div:nth-child(1)>div:nth-child(2)>img
+      {
+        width: 100%;
+        height: 100%;
+      }
+      
+      
+      #most>div:nth-child(2)
+      {
+        display: flex;
+        justify-content: space-between;
+      }
+      #most>div:nth-child(2)>div:nth-child(1)
+      {
+        width: 70%;
+        /* border: 2px solid red; */
+      } 
+      #most>div:nth-child(2)>div:nth-child(1) >h3 
+      {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+      #most>div:nth-child(2)>div:nth-child(1) >p
+      {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+      #most>div:nth-child(2)>div:nth-child(2)
+      {
+        width: 25%;
+        /* border: 1px solid green; */
+
+      }
+      #most>div:nth-child(2)>div:nth-child(2)>img
+      {
+        width: 100%;
+        height: 100%;
+      }
+      
+      
+      #most>div:nth-child(3)
+      {
+        display: flex;
+        justify-content: space-between;
+      }
+      #most>div:nth-child(3)>div:nth-child(1)
+      {
+        width: 70%;
+        /* border: 2px solid red; */
+      } 
+      #most>div:nth-child(3)>div:nth-child(1) >h3 
+      {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+      #most>div:nth-child(3)>div:nth-child(1) >p
+      {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+      #most>div:nth-child(3)>div:nth-child(2)
+      {
+        width: 25%;
+        /* border: 1px solid green; */
+
+      }
+      #most>div:nth-child(3)>div:nth-child(2)>img
+      {
+        width: 100%;
+        height: 100%;
+      }
+      
+      
+      #most>div:nth-child(4)
+      {
+        display: flex;
+        justify-content: space-between;
+      }
+      #most>div:nth-child(4)>div:nth-child(1)
+      {
+        width: 70%;
+        /* border: 2px solid red; */
+      } 
+      #most>div:nth-child(4)>div:nth-child(1) >h3 
+      {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+      #most>div:nth-child(4)>div:nth-child(1) >p
+      {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+      #most>div:nth-child(4)>div:nth-child(2)
+      {
+        width: 25%;
+        /* border: 1px solid green; */
+
+      }
+      #most>div:nth-child(4)>div:nth-child(2)>img
+      {
+        width: 100%;
+        height: 100%;
+      }
+      
+      
+      #most>div:nth-child(5)
+      {
+        display: flex;
+        justify-content: space-between;
+      }
+      #most>div:nth-child(5)>div:nth-child(1)
+      {
+        width: 70%;
+        /* border: 2px solid red; */
+      } 
+      #most>div:nth-child(5)>div:nth-child(1) >h3 
+      {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+      #most>div:nth-child(5)>div:nth-child(1) >p
+      {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+      #most>div:nth-child(5)>div:nth-child(2)
+      {
+        width: 25%;
+        /* border: 1px solid green; */
+
+      }
+      #most>div:nth-child(5)>div:nth-child(2)>img
+      {
+        width: 100%;
+        height: 100%;
+      }
+      #Story
+      {
+        width: 90%;
+        border-top: 1px solid black;
+        margin: auto;
+        display:flex;
+        margin-bottom: 30px;
+       
+
+      }
+      #Story>h3
+      {
+        font-size: 10px;
+        border: 1px solid black;
+        background-color: black;
+        color: white;
+        
+      }
+      #Story>p
+      {
+        font-size: 14px;
+        margin-left: 20px;
+        font-weight: bold;     
+       }
+       #image
+       {
+        width: 90%;
+        /* border: 1px solid black; */
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+       }
+       #image>div
+       {
+        width: 20%;
+        /* border: 1px solid green; */
+       }
+       #image>div:nth-child(1)>div:nth-child(1)>img
+       {
+        width: 100%;
+        margin-bottom: 8px;
+
+       }
+       #image>div:nth-child(1)>div:nth-child(2)>p
+       {
+        margin-bottom: 8px;
+        font-size: 15px;
+       }
+       #image>div:nth-child(1)>div:nth-child(2)>h3
+       {
+        margin-bottom: 8px;
+        font-size: 20px;
+       }
+     
+       #image>div:nth-child(2)>div:nth-child(1)>img
+       {
+        width: 100%;
+
+       }#image>div:nth-child(2)>div:nth-child(2)>p
+       {
+        margin-bottom: 8px;
+        font-size: 15px;
+       }
+       #image>div:nth-child(2)>div:nth-child(2)>h3
+       {
+        margin-bottom: 8px;
+        font-size: 20px;
+       }
+    
+        #image>div:nth-child(3)>div:nth-child(1)>img
+       {
+        width: 100%;
+
+       }
+       #image>div:nth-child(3)>div:nth-child(2)>p
+       {
+        margin-bottom: 8px;
+        font-size: 15px;
+       }
+       #image>div:nth-child(3)>div:nth-child(2)>h3
+       {
+        margin-bottom: 8px;
+        font-size: 20px;
+       }
+     
+       #image>div:nth-child(4)>div:nth-child(1)>img
+       {
+        width: 100%;
+       }
+       #image>div:nth-child(4)>div:nth-child(2)>p
+       {
+        margin-bottom: 8px;
+        font-size: 15px;
+       }
+       #image>div:nth-child(4)>div:nth-child(2)>h3
+       {
+        margin-bottom: 8px;
+        font-size: 20px;
+       }
+      
+       
+
+      @media screen and (max-width: 1020px) {
+        #navbar > div:nth-child(2)>div:nth-child(1)>div:nth-child(1) 
+        {
+          display: none;
+        }
+        #body {
+            
+            flex-direction: column;
+        }
+        #navbar > div:nth-child(2)>div:nth-child(2) {
+          display: none;
+        }
+        
+        #body{
+            /* border: 5px solid red; */
+            width: 100%;
+            
+        }
+        #body > div:nth-child(1){
+            width: 100%;
+            border: 1px solid red;
+            margin-bottom: 20px;
+        }
+        #body > div:nth-child(2){
+            width: 100%;
+            border: 1px solid black;
+        }
+    }
+      
+      @media screen and (max-width: 770px) {
+        #first > div:nth-child(3) {
+          display: none;
+        }
+        
+        #body>div:nth-child(1)>div
+       {
+        flex-direction: column-reverse;
+       }
+       
+        #flex > div:nth-child(1){
+            width:100%;
+            /* border: 10px solid red; */
+        }
+        #flex > div:nth-child(1) > div:nth-child(1) > img{
+            /* width: 100%; */
+            /* border: 4px solid blue; */
+            width: 100%;
+            height: 500px;
+
+        }
+        #flex > div:nth-child(1) > div:nth-child(2) > img{
+            /* width: 100%; */
+            /* border: 4px solid blue; */
+            width: 100%;
+            height: 500px;
+            
+        }
+        #body>div:nth-child(2)
+        {
+          margin-left: 0px;
+        }
+        #most>div:nth-child(1)>div:nth-child(2)>img
+        {
+          display: none;
+        }
+        #most>div:nth-child(2)>div:nth-child(2)>img
+        {
+          display: none;
+        }
+        #most>div:nth-child(3)>div:nth-child(2)>img
+        {
+          display: none;
+        }
+        #most>div:nth-child(4)>div:nth-child(2)>img
+        {
+          display: none;
+        }
+        #most>div:nth-child(5)>div:nth-child(2)>img
+        {
+          display: none;
+        }
+        #image>div
+        {
+          flex-direction: row-reverse;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="screen">
+      <div id="navbar">
+        <div id="first">
+          <div><i class="fa-solid fa-bars"></i></div>
+          <div>
+            <svg height="50" width="125" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M105.375 14.875v17.25h8.5c2.375 0 3.75-.375 4.75-1.25 1.25-1.125 1.875-3.125 1.875-7.375s-.625-6.25-1.875-7.375c-1-.875-2.375-1.25-4.75-1.25zM117 23.5c0 3.75-.25 4.625-1 5.125-.5.375-1.125.5-2.375.5h-4.75V17.75h4.75c1.25 0 1.875 0 2.375.5.75.625 1 1.5 1 5.25zm7.875 12.438H99.937V11h24.938zM79.563 17.75v-2.875h14.75v5.5h-3.126V17.75h-6v4.125h4.75v2.75h-4.75v4.625h6.126v-3h3.124v5.875H79.564V29.25h2.374v-11.5zM66.188 27.625c0 1.875.124 3.25.374 4.375h3.376c-.126-.875-.25-2.5-.25-4.625-.126-2.5-.876-2.875-2.626-3.25 2-.375 2.876-1.25 2.876-4.375 0-2.5-.376-3.5-1.126-4.125-.5-.5-1.374-.75-2.75-.75h-10.5v17.25h3.5v-6.75h4.876c1 0 1.374.125 1.75.375s.5.625.5 1.875zm-7.126-5v-4.75h5.626c.75 0 1 .125 1.124.25.25.25.5.625.5 2.125s-.25 2-.5 2.25c-.124.125-.374.25-1.124.25zm15.876 13.313h-25V11h24.937v24.938zM43.438 29.25v2.875H31.562V29.25h4.25v-11.5h-4.25v-2.875h11.875v2.875h-4.25v11.5zM23.375 14.875h-3.25L17.75 28.5 15 15.875c-.125-.875-.5-1-1.25-1H12c-.75 0-1.125.25-1.25 1L8 28.5 5.625 14.875h-3.5L5.5 31.25c.125.75.375.875 1.25.875h2.375c.75 0 1-.125 1.25-.875L13 19.375l2.625 11.875c.125.75.375.875 1.25.875h2.25c.75 0 1.125-.125 1.25-.875zm1.75 21.063h-25V11h24.938v24.938z"
+              />
+            </svg>
+          </div>
+          <div>
+            <div>BACKCHANNEL</div>
+            <div>BUSINESS</div>
+            <div>CULTURE</div>
+            <div>GEAR</div>
+            <div>IDEAS</div>
+            <div>SCIENCE</div>
+            <div>SECURITY</div>
+          </div>
+        </div>
+        <div id="second">
+          <div>
+            <div>SIGN</div>
+
+            <div>SUBSCRIBE</div>
+          </div>
+          <div><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+      </div>
+      <div id="body">
+        
+        <div>
+            <h1>TODAY'S PICKS</h1>
+            <div id="flex">
+                <div>
+                    <div>
+                        <img src="de9403c9-ebac-431c-8d72-b5143cc7c8f7.jpg">
+                        <h3>HIGH LIFE</h3>
+                        <p>Space Archeologists Are Charting Humanity’s Furthest Frontier</p>
+                        <h3>RAMIN SKIBBA</h3>
+                        
+                    </div>
+                    <div>
+                        <img src="1e119576-64fa-46e2-bd51-f8bab85a36a1.jpg">
+                        <h3>UNPRECEDENTED</h3>
+                        <p>Trump’s Indictment Marks a Historic Reckoning</p>
+                        <h3>GARRETT M. GRAFF</h3>
+                    </div>  
+                </div>
+                <div>
+                    <img src="https://media.wired.com/photos/6425f14984ccb2dd1d2ac6cd/16:9/pass/Pope's-Puffer-Coat-Culture-1431931791.jpg">
+                    <h3>THE MONITOR</h3>
+                    <h2>THE POPE’S COAT IS HERE TO RUIN YOUR FAITH</h2>
+                    <h3>ANGELA WATERCUTTER</h3>
+                </div>
+            </div>
+
+            
+        </div>
+         <div>
+            <h1>MOST RECENT</h1>
+            <div id="most">
+                <div>
+                    <div>
+                        <h3>The Best Portable Storage Drives</h3>
+                        <p>SCOTT GILBERTSON</p>
+                    </div>
+                    <div>
+                        <img src="https://media.wired.com/photos/6425e830a07df6f726e9e533/1:1/w_1280%2Cc_limit/Western-Digital-Elements-Desktop-Hard-Drive-Gear.png">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3>How to Back Up Your Digital Life</h3>
+                        <p>SCOTT GILBERTSON</p>
+                    </div>
+                    <div>
+                        <img src="https://media.wired.com/photos/64262be90a0ea4241d03048f/1:1/w_1280%2Cc_limit/How-to-Back-Up-Your-Digital-Life-Gear-GettyImages-1458674794.png">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3>The Internet Archive’s Literary Civil War</h3>
+                        <p>KATE KNIBBS</p>
+                    </div>
+                    <div>
+                        <img src="https://media.wired.com/photos/642617319a4669561fee606b/1:1/w_1280%2Cc_limit/Internet-Archive's-Literary-Civil-War-Business-1283444005.jpg">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3>13 Laptops We’ve Tested and Love</h3>
+                        <p>ADAM SPEIGHT AND GEAR TEAM</p>
+                    </div>
+                    <div>
+                        <img src="https://media.wired.com/photos/6425ef2984ccb2dd1d2ac6cb/1:1/w_1280%2Cc_limit/asuszenbooks13oled_GEAR-Featured.jpg">
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+                        <h3>The Best Noise-Canceling Headphones to Escape Reality</h3>
+                        <p>PARKER HALL</p>
+                    </div>
+                    <div>
+                        <img src="https://media.wired.com/photos/641e28d7c5d2100c6c651020/1:1/w_1280%2Cc_limit/Bose-QC35-II-Gear.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="trend">
+              <div id="Story">
+                <h3>TRENDING STORIES</h3>
+                <p>TOP STORIES IN LAST 48 HOURS</p>
+              </div>
+              <div id="image">
+                <div>
+                  <div>
+                    <img src="https://media.wired.com/photos/64261cf5aa46b5cab52a844d/16:9/w_640,c_limit/Amazon-Movies-Update-Shotgun-Wedding-Culture-Unit_17946RC_3000.jpg">
+                  </div>
+                  <div>
+                    <p>CULTURE</p>
+                    <h3>The 12 Best Amazon Prime Movies Right Now</h3>
+                    <p>From Shotgun Wedding to No Time to Die, these are the best films available on the streamer.</p>
+                    <p>WIRED STAFF</p>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <img src="https://media.wired.com/photos/64125e7582e9e62cb09a3fb5/16:9/w_640,c_limit/Best-HBO-Movies-banshees-of-inisherin-Culture.jpg">
+                  </div>
+                  <div>
+                    <p>CULTURE</p>
+                    <h3>The 13 Best Movies on HBO Max Right Now</h3>
+                    <p>From Goodfellas to The Banshees of Inisherin, here are our favorite movies on the streaming service.</p>
+                    <p>WIRED STAFF</p>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <img src="https://media.wired.com/photos/62d866d148e3599195fd2d08/16:9/w_640,c_limit/Google-Pixel-6A-Review-Fronts-Gear.jpg">
+                  </div>
+                  <div>
+                    <p>GEAR</p>
+                    <h3>The 12 Top New Android 14 Features</h3>
+                    <p>Here's what Google has planned for the next version of its mobile operating system.</p>
+                    <p>SIMON HILL</p>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <img src="https://media.wired.com/photos/6423519d6881d9d60824b5ee/16:9/w_640,c_limit/Analog-web.jpg">
+                  </div>
+                  <div>
+                    <p>BACKCHANNEL</p>
+                    <h3>The Unbelievable Zombie Comeback of Analog Computing</h3>
+                    <p>Computers have been digital for half a century. Why would anyone want to resurrect the clunkers of yesteryear?</p>
+                    <p>CHARLES PLATT</p>
+                  </div>
+                </div>
+              </div>
+    </div>
+      </div>
+    </div>
+  </body>
+</html>
